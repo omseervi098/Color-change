@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom Assignment</title>
+    <link rel="stylesheet" href="src/styles.css" >
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="circle"><div id="inner" class=""></div></div>
+      <button id="btn1">Change Color</button>
+      <button id="btn2">Change Shapes</button>
+    </div>
+    <script >
+        var changecolor = document.getElementById("btn1");
+        var changeshape = document.getElementById("btn2");
+        var circle = document.getElementById("circle");
+        var inner = document.getElementById("inner");
+        var list = ["pink", "green", "blue", "red", "black", "yellow"];
+        var cnt = 0;
+        changecolor.addEventListener("click", function () {
+          cnt = cnt % 6;
+          circle.style.backgroundColor = list[cnt];
+          cnt++;
+        });
+        var list2 = ["heart", "badge", "flower"];
+        var cnt1 = 0;
+        changeshape.addEventListener("click", function () {
+          cnt1 = cnt1 % 3;
+          inner.className = list2[cnt1];
+          cnt1++;
+        });
+        </script>
+  </body>
+</html>
